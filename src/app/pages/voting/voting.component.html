@@ -1,0 +1,16 @@
+<h5>Vote!!</h5>
+<hr>
+<div class="row">
+    <div class="col"  *ngFor="let option of options">
+        <div class="card h-100 bg-dark">
+            <img [src]="option.url" class="card-img-top" [alt]="option.name">
+            <div class="card-body">
+                <h5 class="card-title">{{option.name}}</h5>
+                <p class="card-text">Description</p>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-block btn-warning text-center" (click)="vote(option.id)">Vote</button>
+            </div>
+        </div>
+    </div>
+</div>
